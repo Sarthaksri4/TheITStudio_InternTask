@@ -19,7 +19,7 @@ class UserController {
         name,
         email,
         phonenumber,
-        hobbies,
+        hobbie,
       });
 
       newUser
