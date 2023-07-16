@@ -12,7 +12,7 @@ const Home = () => {
   });
   useEffect(() => {
     const getAllData = async () => {
-      const res = await axios.get("http://localhost:3700/api/v1/users");
+      const res = await axios.get("https://cruds-app.onrender.com/api/v1/users");
       setUsers(res.data);
     };
     getAllData();
@@ -20,7 +20,7 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3700/api/v1/users", input);
+    await axios.post("https://cruds-app.onrender.com/api/v1/users", input);
     setRender(true);
     setInput({
         name: "",
@@ -31,7 +31,7 @@ const Home = () => {
   };
 
   const handelDelete = async (id) => {
-    await axios.delete(`http://localhost:3700/api/v1/users/${id}`);
+    await axios.delete(`https://cruds-app.onrender.com/api/v1/users/${id}`);
     const newUsers = users.filter((item) => {
       return item._id !== id;
     });
@@ -42,8 +42,10 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-20 ">
-            <div style={{ backgroundColor: "black" }}>
-              <h1 className="text-white text-center mt-2">CRUDS APP</h1>
+            <div style={{ backgroundColor: "#00003B" }}>
+              <h1 className="text-white text-center mt-2">CRUDSimplified</h1>
+              <h3 className="text-white text-center mt-2">Your Trusted Source for Data Control</h3>
+              
             </div>
           </div>
           <div className="col-md-30" >
@@ -112,11 +114,11 @@ const Home = () => {
               </div>
 
               <button type="submit" class="btn btn-primary">
-                Submit
+                Save
               </button>
             </form>
           </div>
-          <div className="col-md-40">
+          <div className="col-md-12">
             <table class="table">
               <thead>
                 <tr>

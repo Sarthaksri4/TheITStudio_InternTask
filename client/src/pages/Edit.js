@@ -13,7 +13,7 @@ const Edit = () => {
   useEffect(() => {
     const getAllData = async () => {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/users/single/${id}`
+        `https://cruds-app.onrender.com/api/v1/users/single/${id}`
       );
       setInput(res.data);
     };
@@ -22,7 +22,7 @@ const Edit = () => {
 
   const handleEditData = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:3000/api/v1/users/${id}`, input);
+    await axios.put(`https://cruds-app.onrender.com/api/v1/users/${id}`, input);
     navigate("/");
   };
   return (
@@ -30,7 +30,7 @@ const Edit = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 ">
-            <div style={{ backgroundColor: "blue" }}>
+            <div style={{ backgroundColor: "#00003B" }}>
               <h1 className="text-white text-center mt-2">Update</h1>
             </div>
           </div>
