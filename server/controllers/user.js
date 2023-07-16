@@ -12,7 +12,7 @@ class UserController {
       });
   }
 
-  static createUser=async(req, res)=> {
+  static createUser(req, res) {
     const { name, email, phonenumber,hobbies } = req.body;
     if (name && email && phonenumber && hobbies) {
       const  newUser = userModel({
@@ -22,7 +22,7 @@ class UserController {
         hobbies,
       });
 
-      await newUser
+      newUser
         .save()
         .then(savedUser => {
           return res.status(201).json(savedUser);
