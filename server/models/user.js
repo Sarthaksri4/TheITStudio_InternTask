@@ -21,8 +21,10 @@ userShema.post("save",async function(doc){
              {
                  from:"Sarthak Srivastava",
                  to:doc.email,
-                 subject:"success",
-                 html:`<h2>e-sathal</h2>`
+                 subject:" Data Saved Confirmation",
+                 html:`<h2> <h1>Data Saved Successfully</h1>
+                 <p>Your data has been successfully saved.</p>
+                 <p>Thank you</p>`
              }
          )
          console.log(info);
