@@ -54,7 +54,7 @@ const Edit = () => {
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">
-                  Email
+                  Email.
                 </label>
                 <input
                   name="email"
