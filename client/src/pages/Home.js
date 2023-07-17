@@ -12,7 +12,7 @@ const Home = () => {
   });
   useEffect(() => {
     const getAllData = async () => {
-      const res = await axios.get("https://cruds-app.onrender.com/api/v1/users");
+      const res = await axios.get("https://cruds-egcs.onrender.com/api/v1/users");
       setUsers(res.data);
     };
     getAllData();
@@ -20,7 +20,7 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://cruds-app.onrender.com/api/v1/users", input);
+    await axios.post("https://cruds-egcs.onrender.com/api/v1/users", input);
     setRender(true);
     setInput({
         name: "",
@@ -31,7 +31,7 @@ const Home = () => {
   };
 
   const handelDelete = async (id) => {
-    await axios.delete(`https://cruds-app.onrender.com/api/v1/users/${id}`);
+    await axios.delete(`https://cruds-egcs.onrender.com/api/v1/users/${id}`);
     const newUsers = users.filter((item) => {
       return item._id !== id;
     });

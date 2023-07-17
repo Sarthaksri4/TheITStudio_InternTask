@@ -13,7 +13,7 @@ const Edit = () => {
   useEffect(() => {
     const getAllData = async () => {
       const res = await axios.get(
-        `https://cruds-app.onrender.com/api/v1/users/single/${id}`
+        `https://cruds-egcs.onrender.com/api/v1/users/single/${id}`
       );
       setInput(res.data);
     };
@@ -22,7 +22,7 @@ const Edit = () => {
 
   const handleEditData = async (e) => {
     e.preventDefault();
-    await axios.put(`https://cruds-app.onrender.com/api/v1/users/${id}`, input);
+    await axios.put(`https://cruds-egcs.onrender.com/api/v1/users/${id}`, input);
     navigate("/");
   };
   return (
